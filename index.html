@@ -155,6 +155,7 @@
     .contact-copy .eyebrow { color: #fff3dc; }
     .contact-copy h2 { max-width: 360px; margin: 24px 0 14px; font-family: var(--serif); font-size: clamp(42px, 5vw, 59px); font-weight: 500; letter-spacing: -.065em; line-height: .98; }
     .contact-copy p { max-width: 310px; margin: 0; color: rgba(255,255,255,.85); font-size: 13px; line-height: 1.75; }
+    .contact-email { display: inline-block; max-width: 310px; margin-top: 15px; color: #fff3dc; font-size: 12px; font-weight: 750; line-height: 1.6; overflow-wrap: anywhere; text-decoration-thickness: 1px; text-underline-offset: 4px; }
     .contact-mark { position: relative; z-index: 1; width: 58px; height: 58px; display: block; overflow: hidden; border: 1px solid rgba(255,255,255,.48); border-radius: 50%; }
     .contact-mark img { display: block; width: 100%; height: 100%; object-fit: cover; mix-blend-mode: multiply; }
     .contact-form-wrap { padding: 40px clamp(25px, 5vw, 56px); }
@@ -254,6 +255,7 @@
       <a class="brand" href="#top" aria-label="Pixel and Paper home"><img class="brand-wordmark" src="assets/pixel-and-paper-wordmark.png" alt="Pixel &amp; Paper"></a>
       <div class="nav-links">
         <a href="#categories">What we make</a>
+        <a href="#contact">Contact us</a>
         <a href="#shop">Shop</a>
         <a href="#how">How it works</a>
         <a class="nav-cta" href="#contact">Let's create <span aria-hidden="true">&rarr;</span></a>
@@ -347,11 +349,11 @@
     <section class="contact-section wrap" id="contact" aria-labelledby="contact-title">
       <div class="contact-panel">
         <div class="contact-copy">
-          <div><span class="eyebrow">Your turn</span><h2 id="contact-title">Tell us what you're dreaming up.</h2><p>Share a few details and we’ll get back to you about your custom poster.</p></div>
+          <div><span class="eyebrow">Contact us</span><h2 id="contact-title">Let's make something special.</h2><p>Hi! I'm the middle schooler behind Pixel &amp; Paper. I love crafts and making fun posters for special moments. Have a question or an idea? I'd love to hear from you.</p><a class="contact-email" href="mailto:pixelandpaperposters@gmail.com">pixelandpaperposters@gmail.com</a></div>
           <span class="contact-mark" aria-hidden="true"><img src="assets/pixel-and-paper-lettermark.png" alt=""></span>
         </div>
         <div class="contact-form-wrap">
-          <p class="form-intro">The more you tell us, the more we can make it feel like yours.</p>
+          <p class="form-intro">Or use the form to share the details for a custom poster request.</p>
           <form id="order-form">
             <div class="form-grid">
               <div class="field"><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" placeholder="What should we call you?" maxlength="100" required></div>
@@ -384,6 +386,7 @@
     //   created_at timestamptz not null default now()
     // );
     // alter table public.orders enable row level security;
+    // grant insert on table public.orders to anon;
     // create policy "Public can submit new requests" on public.orders
     //   for insert to anon with check (status = 'New');
     //
