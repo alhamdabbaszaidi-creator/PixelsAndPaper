@@ -1,11 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f7f4ec">
-  <meta name="description" content="Custom digital posters and invitations, thoughtfully made for birthdays, events, and small businesses.">
-  <title>Pixel &amp; Paper — Posters for your moment</title>
+  <meta name="description" content="Custom digital posters and invitations, thoughtfully made for birthdays, events, and small businesses. Instant downloads, no shipping.">
+  <title>Pixel &amp; Paper — Digital Posters for your moment</title>
   <link rel="icon" type="image/png" href="assets/pixel-and-paper-lettermark.png">
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
   <style>
@@ -136,15 +136,18 @@
     .product h3 { margin-bottom: 7px; font-size: 15px; letter-spacing: -.02em; }
     .price { color: var(--orange-dark); font-family: var(--serif); font-size: 20px; white-space: nowrap; }
     .product-info p { min-height: 40px; margin-bottom: 15px; color: var(--muted); font-size: 12px; line-height: 1.65; }
+    .product-badge { display: inline-block; margin-top: 8px; padding: 4px 9px; border-radius: 999px; background: #fef3e8; color: var(--orange-dark); font-size: 10px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
     .order-link { display: inline-flex; align-items: center; gap: 8px; border: 0; padding: 0; background: transparent; color: var(--ink); font-size: 12px; font-weight: 750; cursor: pointer; }
     .order-link span { color: var(--orange-dark); font-size: 17px; transition: transform .2s ease; }
     .order-link:hover span { transform: translateX(4px); }
 
-    .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 43px; }
+    .process-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; margin-top: 43px; }
     .process-step { position: relative; border-top: 1px solid var(--line); padding-top: 20px; }
-    .step-number { display: inline-grid; width: 30px; height: 30px; place-items: center; margin-bottom: 18px; border-radius: 50%; background: var(--yellow); font-family: var(--serif); font-size: 16px; }
+    .step-number { display: inline-grid; width: 30px; height: 30px; place-items: center; margin-bottom: 18px; border-radius: 50%; background: var(--yellow); font-family: var(--serif); font-size: 16px; font-weight: 700; color: var(--ink); }
     .process-step:nth-child(2) .step-number { background: var(--pink); }
-    .process-step:nth-child(3) .step-number { background: var(--green); }
+    .process-step:nth-child(3) .step-number { background: #d7e5df; }
+    .process-step:nth-child(4) .step-number { background: var(--green); }
+    .process-step:nth-child(5) .step-number { background: var(--blue); }
     .process-step h3 { margin-bottom: 9px; font-family: var(--serif); font-size: 23px; font-weight: 500; letter-spacing: -.035em; }
     .process-step p { max-width: 290px; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.75; }
 
@@ -190,6 +193,9 @@
       .category-grid { grid-template-columns: repeat(2, 1fr); }
       .product-art { height: 270px; }
       .contact-copy { padding: 32px; }
+      .process-grid { grid-template-columns: repeat(5, 1fr); gap: 16px; }
+      .process-step h3 { font-size: 18px; }
+      .process-step p { font-size: 12px; }
     }
     @media (max-width: 620px) {
       .wrap { width: min(100% - 32px, 480px); }
@@ -227,11 +233,11 @@
       .product-grid { grid-template-columns: 1fr; gap: 14px; }
       .product-art { height: 285px; }
       .product-info p { min-height: 0; }
-      .process-grid { grid-template-columns: 1fr; gap: 22px; margin-top: 28px; }
-      .process-step { display: grid; grid-template-columns: 38px 1fr; column-gap: 12px; padding-top: 15px; }
-      .step-number { grid-row: span 2; margin-bottom: 0; }
-      .process-step h3 { align-self: center; margin: 0 0 5px; font-size: 21px; }
-      .process-step p { grid-column: 2; }
+      .process-grid { grid-template-columns: 1fr; gap: 16px; margin-top: 28px; }
+      .process-step { display: grid; grid-template-columns: 38px 1fr; column-gap: 12px; padding-top: 15px; border-top: none; }
+      .step-number { grid-row: span 2; margin-bottom: 0; width: 28px; height: 28px; font-size: 14px; }
+      .process-step h3 { align-self: center; margin: 0 0 5px; font-size: 17px; }
+      .process-step p { grid-column: 2; margin-top: 0; }
       .contact-section { padding-top: 5px; padding-bottom: 68px; }
       .contact-panel { grid-template-columns: 1fr; }
       .contact-copy { min-height: 265px; padding: 27px; }
@@ -249,7 +255,7 @@
   </style>
 </head>
 <body>
-  <div class="announcement">A little paper magic, made just for you</div>
+  <div class="announcement">✨ Digital posters • Instant downloads • No shipping ✨</div>
   <header class="site-header">
     <nav class="nav wrap" aria-label="Main navigation">
       <a class="brand" href="#top" aria-label="Pixel and Paper home"><img class="brand-wordmark" src="assets/pixel-and-paper-wordmark.png" alt="Pixel &amp; Paper"></a>
@@ -268,17 +274,17 @@
       <div class="hero-copy">
         <span class="eyebrow">Custom digital posters</span>
         <h1 id="hero-title">Big moments deserve <em>good design.</em></h1>
-        <p>One-of-a-kind posters and invitations for birthdays, big ideas, and all the little celebrations in between.</p>
+        <p>Custom digital posters and invitations for birthdays, big ideas, and all the little celebrations. Download instantly, share anywhere, no physical shipping.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="#shop">Find your design <span class="button-arrow" aria-hidden="true">&rarr;</span></a>
           <a class="button button-quiet" href="#contact">Request something custom</a>
         </div>
         <div class="hero-note">
           <span class="avatar-stack" aria-hidden="true"><span class="avatar">P</span><span class="avatar">&amp;</span><span class="avatar">P</span></span>
-          <span>Made with care, just for your moment</span>
+          <span>Made with care, ready to download</span>
         </div>
       </div>
-      <div class="hero-art" role="img" aria-label="A colorful custom poster that reads 'Make today a little more special'">
+      <div class="hero-art" role="img" aria-label="A colorful custom digital poster that reads 'Make today a little more special'">
         <div class="art-blob"></div>
         <span class="sparkle sparkle-one" aria-hidden="true">✳</span>
         <span class="sparkle sparkle-two" aria-hidden="true">✳</span>
@@ -288,23 +294,23 @@
           <h2>Make today <span>a little</span> special</h2>
           <div class="poster-bottom"><span>Made for your moment</span><span>Est. 2026</span></div>
         </div>
-        <div class="floating-tag tag-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3v18M3 12h18M5.64 5.64l12.72 12.72m0-12.72L5.64 18.36"/></svg> Made just for you</div>
-        <div class="floating-tag tag-bottom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-8-4.35-8-11a4.5 4.5 0 0 1 8-2.83A4.5 4.5 0 0 1 20 10c0 6.65-8 11-8 11Z"/></svg> A little extra special</div>
+        <div class="floating-tag tag-top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3v18M3 12h18M5.64 5.64l12.72 12.72m0-12.72L5.64 18.36"/></svg> Digital file</div>
+        <div class="floating-tag tag-bottom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-8-4.35-8-11a4.5 4.5 0 0 1 8-2.83A4.5 4.5 0 0 1 20 10c0 6.65-8 11-8 11Z"/></svg> Download & share</div>
       </div>
     </section>
 
     <div class="strip" aria-label="Our approach">
       <div class="strip-inner wrap">
         <span class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/><path d="m19 15 .9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9L19 15Z"/></svg>Original designs</span>
-        <span class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 4h16v16H4zM8 8h8M8 12h8M8 16h5"/></svg>Made for your story</span>
-        <span class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3v18M3 12h18M5.64 5.64l12.72 12.72m0-12.72L5.64 18.36"/></svg>Digital and easy to share</span>
+        <span class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3h8v8h-8zm0 10h8v8h-8zM4 3h8v8H4zm0 10h8v8H4z"/></svg>Digital files only</span>
+        <span class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm3.5 10l-4 4-2-2"/></svg>Instant download</span>
       </div>
     </div>
 
     <section class="section wrap" id="categories" aria-labelledby="categories-title">
       <div class="section-head">
         <div><span class="eyebrow">A design for every occasion</span><h2 id="categories-title">What are we making?</h2></div>
-        <p>From party plans to your next big idea, let’s make something people will want to keep.</p>
+        <p>Custom digital posters for parties, invites, business launches, and beyond. All files delivered instantly.</p>
       </div>
       <div class="category-grid">
         <a class="category" href="#shop"><span class="category-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3v3m0 12v3M4.6 6.1l2.1 2.1m8.6 8.6 2.1 2.1M3 13h3m12 0h3M4.6 19.9l2.1-2.1m8.6-8.6 2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg></span><span class="category-bottom"><h3>Birthday joy</h3><span class="category-arrow" aria-hidden="true">&rarr;</span></span></a>
@@ -318,42 +324,44 @@
       <div class="wrap">
         <div class="section-head">
           <div><span class="eyebrow">A few customer favorites</span><h2 id="shop-title">Good things, ready to go.</h2></div>
-          <p>Choose a starting point. We’ll personalize the details to make it yours.</p>
+          <p>Choose a design template. We'll customize it with your details and send the digital file instantly.</p>
         </div>
         <div class="product-grid">
           <article class="product">
-            <div class="product-art one" aria-label="Birthday invitation poster preview" role="img"><div class="art-card"><small>YOU'RE INVITED</small><span class="mini-shape" aria-hidden="true">✳</span><strong>Birthday<br>party!</strong><em>Let's celebrate</em></div></div>
-            <div class="product-info"><div class="product-title-row"><h3>Birthday invitation</h3><span class="price">$5</span></div><p>A bright, happy invite with all the details your guests need.</p><button class="order-link" type="button" data-product="Birthday Invitation">Make it yours <span aria-hidden="true">&rarr;</span></button></div>
+            <div class="product-art one" aria-label="Birthday invitation digital poster preview" role="img"><div class="art-card"><small>YOU'RE INVITED</small><span class="mini-shape" aria-hidden="true">✳</span><strong>Birthday<br>party!</strong><em>Let's celebrate</em></div></div>
+            <div class="product-info"><div class="product-title-row"><h3>Birthday invitation</h3><span class="price">$5</span></div><p>A bright, happy invite with all the details your guests need.</p><span class="product-badge">Digital download</span><button class="order-link" type="button" data-product="Birthday Invitation">Make it yours <span aria-hidden="true">&rarr;</span></button></div>
           </article>
           <article class="product">
-            <div class="product-art two" aria-label="Small business grand opening poster preview" role="img"><div class="art-card"><small>THE GOOD STUFF</small><span class="mini-shape" aria-hidden="true">✳</span><strong>HELLO,<br>world.</strong><em>Something new is here</em></div></div>
-            <div class="product-info"><div class="product-title-row"><h3>Business promo poster</h3><span class="price">$10</span></div><p>Give your launch, special offer, or new idea a little spotlight.</p><button class="order-link" type="button" data-product="Business Promo Poster">Make it yours <span aria-hidden="true">&rarr;</span></button></div>
+            <div class="product-art two" aria-label="Small business grand opening digital poster preview" role="img"><div class="art-card"><small>THE GOOD STUFF</small><span class="mini-shape" aria-hidden="true">✳</span><strong>HELLO,<br>world.</strong><em>Something new is here</em></div></div>
+            <div class="product-info"><div class="product-title-row"><h3>Business promo poster</h3><span class="price">$10</span></div><p>Give your launch, special offer, or new idea a little spotlight.</p><span class="product-badge">Digital download</span><button class="order-link" type="button" data-product="Business Promo Poster">Make it yours <span aria-hidden="true">&rarr;</span></button></div>
           </article>
           <article class="product">
-            <div class="product-art three" aria-label="Event announcement poster preview" role="img"><div class="art-card"><small>SAVE THE DATE</small><span class="mini-shape" aria-hidden="true">✦</span><strong>Meet me<br>there.</strong><em>A day to remember</em></div></div>
-            <div class="product-info"><div class="product-title-row"><h3>Event announcement</h3><span class="price">$8</span></div><p>Set the scene for a gathering, celebration, or community event.</p><button class="order-link" type="button" data-product="Event Poster">Make it yours <span aria-hidden="true">&rarr;</span></button></div>
+            <div class="product-art three" aria-label="Event announcement digital poster preview" role="img"><div class="art-card"><small>SAVE THE DATE</small><span class="mini-shape" aria-hidden="true">✦</span><strong>Meet me<br>there.</strong><em>A day to remember</em></div></div>
+            <div class="product-info"><div class="product-title-row"><h3>Event announcement</h3><span class="price">$8</span></div><p>Set the scene for a gathering, celebration, or community event.</p><span class="product-badge">Digital download</span><button class="order-link" type="button" data-product="Event Poster">Make it yours <span aria-hidden="true">&rarr;</span></button></div>
           </article>
         </div>
       </div>
     </section>
 
     <section class="section wrap" id="how" aria-labelledby="how-title">
-      <div class="section-head"><div><span class="eyebrow">Simple as one, two, three</span><h2 id="how-title">From idea to oh, wow.</h2></div><p>You bring the occasion. We’ll help turn it into a design that feels like you.</p></div>
+      <div class="section-head"><div><span class="eyebrow">Our simple process</span><h2 id="how-title">From order to download.</h2></div><p>We make sure your poster is exactly right before you pay.</p></div>
       <div class="process-grid">
-        <article class="process-step"><span class="step-number">1</span><h3>Pick a starting point</h3><p>Choose a design from the shop or tell us what you have in mind.</p></article>
-        <article class="process-step"><span class="step-number">2</span><h3>Share the details</h3><p>Send names, dates, colors, and any little touches you want included.</p></article>
-        <article class="process-step"><span class="step-number">3</span><h3>Make it a moment</h3><p>We’ll create your custom digital design, ready for you to share.</p></article>
+        <article class="process-step"><span class="step-number">1</span><h3>Place Your Order</h3><p>Tell us which design you want and all the details—names, dates, colors, text.</p></article>
+        <article class="process-step"><span class="step-number">2</span><h3>We Design It</h3><p>We create your custom digital poster using your exact specifications.</p></article>
+        <article class="process-step"><span class="step-number">3</span><h3>Preview Sent</h3><p>We send you a sample for you to review. Usually within 48 hours.</p></article>
+        <article class="process-step"><span class="step-number">4</span><h3>You Approve</h3><p>Love it? Great! Need changes? Just let us know and we'll modify it.</p></article>
+        <article class="process-step"><span class="step-number">5</span><h3>Pay & Download</h3><p>Payment received, and we instantly send you the final digital file.</p></article>
       </div>
     </section>
 
     <section class="contact-section wrap" id="contact" aria-labelledby="contact-title">
       <div class="contact-panel">
         <div class="contact-copy">
-          <div><span class="eyebrow">Contact us</span><h2 id="contact-title">Let's make something special.</h2><p>Hi! I'm the middle schooler behind Pixel &amp; Paper. I love crafts and making fun posters for special moments. Have a question or an idea? I'd love to hear from you.</p><a class="contact-email" href="mailto:pixelandpaperposters@gmail.com">pixelandpaperposters@gmail.com</a></div>
+          <div><span class="eyebrow">Contact us</span><h2 id="contact-title">Let's make something special.</h2><p>Hi! I'm the middle schooler behind Pixel &amp; Paper. I love crafts and making fun digital posters for special moments. Have a question or an idea? I'd love to hear from you.</p><a class="contact-email" href="mailto:pixelandpaperposters@gmail.com">pixelandpaperposters@gmail.com</a></div>
           <span class="contact-mark" aria-hidden="true"><img src="assets/pixel-and-paper-lettermark.png" alt=""></span>
         </div>
         <div class="contact-form-wrap">
-          <p class="form-intro">Or use the form to share the details for a custom poster request.</p>
+          <p class="form-intro">Or use the form to request a custom digital poster. You'll get a preview usually within 48 hours, depending on order volume.</p>
           <form id="order-form">
             <div class="form-grid">
               <div class="field"><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" placeholder="What should we call you?" maxlength="100" required></div>
@@ -363,35 +371,16 @@
             </div>
             <button class="submit-button" id="submit-button" type="submit">Send my request <span aria-hidden="true">&rarr;</span></button>
             <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
-            <p class="privacy-note">Your details are only used to follow up about this design request.</p>
+            <p class="privacy-note">Your details are only used to follow up about this digital poster request.</p>
           </form>
         </div>
       </div>
     </section>
   </main>
 
-  <footer><div class="footer-inner wrap"><a class="brand footer-brand" href="#top" aria-label="Pixel and Paper home"><img class="brand-wordmark" src="assets/pixel-and-paper-wordmark.png" alt="Pixel &amp; Paper"></a><p>&copy; <span id="year">2026</span> Pixel &amp; Paper. Made with care.</p><a class="back-top" href="#top">Back to top &uarr;</a></div></footer>
+  <footer><div class="footer-inner wrap"><a class="brand footer-brand" href="#top" aria-label="Pixel and Paper home"><img class="brand-wordmark" src="assets/pixel-and-paper-wordmark.png" alt="Pixel &amp; Paper"></a><p>&copy; <span id="year">2026</span> Pixel &amp; Paper • Digital posters made with care.</p><a class="back-top" href="#top">Back to top &uarr;</a></div></footer>
 
   <script>
-    // SETUP: In the Supabase SQL Editor, run this once to create the orders table
-    // and allow the public website to submit new requests (but not read them):
-    //
-    // create table public.orders (
-    //   id uuid primary key default gen_random_uuid(),
-    //   name text not null,
-    //   email text not null,
-    //   design_type text not null,
-    //   details text not null,
-    //   status text not null default 'New',
-    //   created_at timestamptz not null default now()
-    // );
-    // alter table public.orders enable row level security;
-    // grant insert on table public.orders to anon;
-    // create policy "Public can submit new requests" on public.orders
-    //   for insert to anon with check (status = 'New');
-    //
-    // Then replace these values with your Supabase Project URL and anon/publishable key.
-    // Never put a service_role or secret key in a website's HTML.
     const SUPABASE_URL = 'https://aryfnqameulxqmzxkdrk.supabase.co';
     const SUPABASE_PUBLIC_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFyeWZucWFtZXVseHFtenhrZHJrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA0Mzk4MzgsImV4cCI6MjEwNjAxNTgzOH0._23jrpvoi8F7PtEZetMQ2GrnLKq_p7ifPmSfdn25DGA';
 
@@ -446,11 +435,11 @@
 
         form.reset();
         message.dataset.state = 'success';
-        message.textContent = 'Your request is in! Thanks for sharing your idea. We’ll be in touch soon.';
+        message.textContent = 'Your request is in! Thanks for sharing your idea. We'll create your custom poster and send you a preview usually within 48 hours.';
       } catch (error) {
         console.error('Could not save poster request:', error);
         message.dataset.state = 'error';
-        message.textContent = 'We couldn’t send that just now. Please try again in a moment.';
+        message.textContent = 'We couldn't send that just now. Please try again in a moment.';
       } finally {
         submitButton.disabled = false;
         submitButton.innerHTML = 'Send my request <span aria-hidden="true">&rarr;</span>';
